@@ -1,0 +1,45 @@
+<div class="form-container ville">
+    <form (ngSubmit)="getByVille()" class="form-inline">
+        <label for="ville" class="sr-only">Ville:</label><br />
+        <input type="text" id="ville" name="ville" class="form-control mb-2 mr-sm-2" [(ngModel)]="ville" /><br />
+        <input type="submit" value="Submit" class="btn btn-primary mb-2" />
+    </form>
+  </div>
+  
+  <div class="form-container lat-long">
+    <form (ngSubmit)="getByLatitudeLongitude()" class="form-inline">
+        <label for="ville" class="sr-only">Latitude:</label><br />
+        <input type="text" id="latitude" name="latitude" class="form-control mb-2 mr-sm-2" [(ngModel)]="latitude" /><br />
+        <label for="ville" class="sr-only">Longitude:</label><br />
+        <input type="text" id="longitude" name="longitude" class="form-control mb-2 mr-sm-2" [(ngModel)]="longitude" /><br />
+        <input type="submit" value="Submit" class="btn btn-primary mb-2" />
+    </form>
+  </div>
+  
+  <br>
+  
+  <div class="form-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Etat</th>
+                <th>Rue</th>
+                <th>ville</th>
+                <th>Municipalité</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of data" [ngClass]="{'etat-ralenti': item.etat === 'ralenti', 'etat-normal': item.etat !== 'ralenti'}">
+                <td>{{ item.latitude }}</td>
+                <td>{{ item.longitude }}</td>
+                <td>{{ item.etat }}</td>
+                <td>{{ item.nomRue }}</td>
+                <td>{{ item.ville }}</td>
+                <td>{{ item.municipalite }}</td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+  

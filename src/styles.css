@@ -1,0 +1,83 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0; /* Remove default margin */
+  }
+  
+  /* Form Container Styles */
+  .form-container {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Include padding and border in width calculation */
+  }
+  
+  /* Inline Form Container Styles */
+  .ville,
+  .lat-long {
+    display: inline-block;
+    width: 48%; /* Adjust the width to allow for some spacing */
+    height: 300px;
+    margin-right: 2%; /* Add a small margin between the containers */
+    vertical-align: top; /* Align boxes at the top */
+  }
+  
+  /* Form Input Styles */
+  .form-inline input[type="text"] {
+    width: calc(100% - 22px); /* Adjusted width calculation to account for padding and border */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Include padding and border in width calculation */
+  }
+  
+  /* Submit Button Styles */
+  .form-inline input[type="submit"] {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-inline input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Table Styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 12px; /* Adjusted padding for better spacing */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Table Row Styles */
+  tr.etat-ralenti {
+    background-color: rgba(255, 153, 153, 0.9); /* Increased opacity */
+  }
+  
+  tr.etat-normal {
+    background-color: #8abd8abe;
+  }
+  
